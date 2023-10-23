@@ -16,7 +16,9 @@ prec_to_arg = {
     "llm-xpu": {
         "int4": "load_in_low_bit=sym_int4",
         "nf4": "load_in_low_bit=nf4",
-        "nf3": "load_in_low_bit=nf3"
+        "nf3": "load_in_low_bit=nf3",
+        "fp8": "load_in_low_bit=fp8",
+        "fp4": "load_in_low_bit=fp4"
     },
     "hf-causal": {
         "nf4": "bnb_type=nf4",
