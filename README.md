@@ -14,11 +14,11 @@ Currently, you can reuse the datasets in `arda@arda-arc01:/mnt/disk1/leaderboard
 ## Examples
 ### CPU Usage
 ```python
-python llb.py --model llm-xpu --pretrained /path/to/model --precision nf3 int4 nf4 --device cpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
+python llb.py --model bigdl-llm --pretrained /path/to/model --precision nf3 int4 nf4 --device cpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
 ```
 ### Intel GPU Usage
 ```python
-python llb.py --model llm-xpu --pretrained /path/to/model --precision nf3 int4 nf4 --device xpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
+python llb.py --model bigdl-llm --pretrained /path/to/model --precision nf3 int4 nf4 --device xpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
 ```
 ### Reproduce or run on Nvidia GPU
 ```python
