@@ -1,16 +1,24 @@
 # How to quickly generate LeaderBoard results
 
-## Environment Setup
-### Install BigDL-LLM & Harness
-Here we take an example of installation steps on CPU, please install `bigdl-llm` according to your platform.
-```shell
-pip install bigdl-llm[all]
-pip install -e .
-```
-### Prepare your datasets and models
+
+## Prepare your datasets and models
 Download your model and datasets to your device.
 
-Currently, you can reuse the datasets in `arda@arda-arc01:/mnt/disk1/leaderboard-acc-test`
+Currently, you can download from FTP Server by:
+```shell
+export HF_HOME=/hf_home/for/tests
+wget -r -nH ftp://[username]:[password]@aep-008.sh.intel.com:8821/LeaderBoard_Datasets -p $HF_HOME
+wget -r -nH ftp://[username]:[password]@aep-008.sh.intel.com:8821/model -p /path/to/store/model
+```
+## Environment Setup
+
+Make sure env var `HF_HOME` is correctly set to your huggingface home directory. Run [prepare-bigdl-llb-env.sh](./prepare-bigdl-llb-env.sh) to setup your environment.
+```shell
+# Usage:
+bash prepare-bigdl-llb-env.sh xpu   # for xpu test
+bash prepare-bigdl-llb-env.sh cpu   # for cpu test
+```
+
 ## Examples
 ### CPU Usage
 ```python
