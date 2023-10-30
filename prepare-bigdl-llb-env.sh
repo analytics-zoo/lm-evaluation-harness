@@ -18,6 +18,7 @@ then
 
 else 
     pip install --pre --upgrade bigdl-llm[all]
+fi
 
 pip install -e .
 
