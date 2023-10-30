@@ -19,7 +19,9 @@ bash prepare-bigdl-llb-env.sh xpu   # for xpu test
 bash prepare-bigdl-llb-env.sh cpu   # for cpu test
 ```
 
-## Examples
+## Get started with `llb.py`
+`llb.py` combines some arguments in `main.py` to make the tests easier. The mapping of arguments is defined as a dict in [`llb.py`](llb.py).
+
 ### CPU Usage
 ```python
 python llb.py --model bigdl-llm --pretrained /path/to/model --precision nf3 int4 nf4 --device cpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
@@ -35,6 +37,7 @@ python llb.py --model hf-causal --pretrained /path/to/model --precision bf16 --d
 # Bitsandbytes NF4
 python llb.py --model hf-causal --pretrained /path/to/model --precision nf4 --device xpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
 ```
+
 # Original ReadMe for Harness
 # Language Model Evaluation Harness
 
