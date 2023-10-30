@@ -37,6 +37,11 @@ python llb.py --model hf-causal --pretrained /path/to/model --precision bf16 --d
 # Bitsandbytes NF4
 python llb.py --model hf-causal --pretrained /path/to/model --precision nf4 --device xpu --tasks hellaswag arc mmlu truthfulqa --output_dir results/output
 ```
+## Check logs and results
+```shell
+tail -F path/to/your/log
+```
+Typically for `MMLU`, there are 57 subtasks included, which means you'll have to average the metric results somehow(current method is pasting them to excel and average all 57 `acc` rows). Another way to do this is add a function to automatically average results and output the average.
 
 # Original ReadMe for Harness
 # Language Model Evaluation Harness
