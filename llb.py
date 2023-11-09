@@ -19,6 +19,7 @@ prec_to_arg = {
         "nf3": "load_in_low_bit=nf3",
         "fp8": "load_in_low_bit=fp8",
         "fp4": "load_in_low_bit=fp4",
+        "mix4": "load_in_low_bit=mixed_4bit",
         "bf16": "dtype=bfloat16",
         "fp16": "dtype=float16",
     },
